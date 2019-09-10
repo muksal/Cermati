@@ -2,14 +2,15 @@
   "name": "cypress-cucumber-example",
   "version": "1.0.0",
   "description": "Example of cypress with cucumber",
-  "main": "index.js",
+  "main": "test/test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "open": "./node_modules/.bin/cypress open"
+    "tests": "echo \"Error: no test specified\" && exit 1",
+    "open": "./node_modules/.bin/cypress open",
+    "test": "mocha cypress/fixtures/test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheBrainFamily/cypress-cucumber-example.git"
+    "url": "git@github.com:muksal/cypressXmocha.git"
   },
   "keywords": [
     "cypress",
@@ -30,6 +31,9 @@
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "cypress": "^3.2.0"
+    "chai": "^4.2.0",
+    "cypress": "^3.2.0",
+    "mocha": "^6.2.0",
+    "mochawesome": "^4.1.0"
   }
 }

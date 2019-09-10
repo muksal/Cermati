@@ -1,5 +1,5 @@
 {
-    "env": {
-        "live": "https://www.cermati.com/gabung"
-    }
+  "env": {
+    "stg": "https://www.facebook.com/login/"
+  }
 }

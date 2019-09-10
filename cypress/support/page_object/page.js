@@ -1,5 +1,5 @@
 //------------------------------ENV----------------------------------//
-const live_env = Cypress.env('live');
+const live_env = Cypress.env('prod');
 //------------------------------DATA----------------------------------//
 const testData = {
     email: 'muksalmina.bukhari@gmail.com',
@@ -46,8 +46,8 @@ export function validationPage(param){
 }
 export function input(param){ 
     cy.on('uncaught:exception', (err, runnable) => {
-        return false
-    })
+        return false;
+    });
     cy.wait(500);
     switch (param){
         case 'email':
@@ -67,7 +67,7 @@ export function input(param){
             break;
         case 'rcity':
             cy.get(elements.kota).type(testData.kota);
-            break
+            break;
     }
 }
 
@@ -75,7 +75,7 @@ export function clickButton(param){
     cy.wait(500);
     switch (param){
         case 'signUp':
-        cy.get(elements.signUpButton).click()
+        cy.get(elements.signUpButton).click();
         break;
     }
 }
